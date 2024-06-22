@@ -5,7 +5,7 @@ Instaluje się jako panel dostępny w menu Widok, Panele albo po kliknięciu pra
 Zmiany w wersji 1.1.0:
 - obie współrzędne w jednym polu,
 - wprowadzenie współrzędnych w formacie deg albo dms, wybór po naciśnięciu t,
-- przełączanie pmiędzy formatami deg i dms,
+- przełączanie pomiędzy formatami deg i dms,
 - ograniczenie zbyt dużej ilości miejsc po przecinku.
 
 ![First look](FirstLook.png)
