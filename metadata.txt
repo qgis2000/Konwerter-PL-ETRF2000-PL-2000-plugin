@@ -22,6 +22,6 @@ tags=converter
 
 changelog= + obie współrzędne w jednym polu
 	   + wprowadzenie współrzędnych w formacie deg albo dms
-	   + przełączanie pmiędzy formatami deg i dms
+	   + przełączanie pomiędzy formatami deg i dms
 	   + zakładka z ustawieniami
 	   + ograniczenie zbyt dużej ilości miejsc po przecinku
