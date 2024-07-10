@@ -1,0 +1,23 @@
+[general]
+name=Konwerter PL-ETRF2000 PL-2000
+
+description=Konwerter współrzędnych punktu układu PL-ETRF2000 do układu PL-2000
+
+about=    Program może być przydatny po pomiarach satelitarnych w odniesieniu do stacji referencyjnych ASG-EUPOS w Polsce, gdzie współrzędne stacji podawane są w układzie PL-ETRF2000.  Wyniki pomiarów można przeliczyć z układu PL-ETRF2000 do układu PL-2000.
+
+    Wtyczka instalowana jest jako panel i dostępna w menu Widok, Panele. Można też kliknąć prawym przyciskiem na dowolnym pasku narzędzi głównego okna.
+
+    Uwaga W funkcjach QGIS współrzędne x y są odwrotnie niż w układzie PL-2000.
+
+version=1.1.2
+homepage=https://github.com/qgis2000/Konwerter-PL-ETRF2000-PL-2000-plugin
+tracker=https://github.com/qgis2000/Konwerter-PL-ETRF2000-PL-2000-plugin/issues
+repository=https://github.com/qgis2000/Konwerter-PL-ETRF2000-PL-2000-plugin
+qgisMinimumVersion=3.28
+author=Szymon Kędziora
+email=szymon.kedziora@onet.pl
+icon=thumbnail.png
+
+tags=converter
+
+changelog= Zmiana plugin_dir aby plugin mógł być uruchamiany z katalogu o dowolnej nazwie co ma znaczenie przy pobieraniu z github.
