@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<style>
+  html {
+      font-family : Times New Roman;
+  }
+  table[class="it"]{
+      font-style: italic;
+  }
+  li{
+      line-height: 1.5
+  }
+  p{
+      line-height: 1.5;
+  }
+</style>
+<p>Program przelicza współrzędne punktu z układu PL-ETRF2000 do układu PL-2000.</p>
+
+<p>Może być przydatny przy opracowywaniu wyników pomiarów GNSS w odniesieniu do stacji referencyjnych ASG-EPOS, gdzie współrzędne stacji podane są w układzie PL-ETRF2000. Uzyskane z pomiarów współrzędne punktów w układzie PL-ETRF2000 (ETRF2000 na epokę 2011.0), po przeliczeniu do układu PL-2000 (PUWG 2000), można nanieść na mapę w układzie PL-2000 z granicami działek i konturami budynków.</p>
+
+<p><b>W związku z tym, że układ PL-2000 dzieli się na cztery strefy a granice stref wyznaczone są przez framgmenty granic powiatów przed wprowadzeniem współrzędnych należy wybrać powiat, do którego należy mierzony obiekt albo wybrać strefę.</b></p>
+
+<p>Program pozwala na wprowadzenie współrzędnych punktu układu PL-ETRF2000 w dwóch formatach:
+  <ul>
+    <li>stopniach (zwany także formatem dziesiętnym, formatem decimal, formatem dd albo deg)</li>
+    <li>stopniach minutach sekundach (format dms).</li>
+  </ul>
+</p>
+<p>Dla formatu deg można wprowadzić dane z 8-10 miejsc po przecinku.</p>
+<p>Dla formatu dms można wprowadzić dane z 5-7 miejsc po przecinku.</p>
+<br>
+<h3>Przykład 1</h3>
+<p>Przed pomiarem sprawdzono, że orientacyjne miejsce pomiaru znajduje się na terenie powiatu Poznań. Można to zrobić w następujący sposób:</p>
+<ol>
+  <li>Wyświetlamy stronę <i>mapy.geoportal.gov.pl</i></li>
+  <li>Po prawej stronie w panelu <i>Zawartość mapy</i> w zakładce <i>Warstwy</i> należy zaznaczyć <i>Państwowy rejestr granic</i> a następnie go rozwinąć klikając na znak +.</li>
+  <li>Następnie usunąć zaznaczenie z <i>A00_Granice_państwa</i>, <i>A01_Granice_województw</i>, <i>A03_Granice_gmin</i>, <i>A06_Granice_obrebow_ewidencyjnych</i>. Należy pozostawić zaznaczone <i>A02_Granice_powiatów</i> </li>
+  <li>Przez przybliżanie i oddalanie znajdujemy orientacyjne miejsce pomiaru i odczytujemy, że leży w powiecie Poznań.</li>
+</ol> 
+<p>W wyniku pomiaru uzyskano współrzędne punktu w układzie PL-ETRF2000:</p>
+<table  class="it">
+  <tr>
+    <td>szerokość</td>
+    <td>φ</td>
+    <td>=</td>
+    <td>52,48649125</td>
+  </tr>
+  <tr>
+    <td>długość</td>
+    <td>λ</td>
+    <td>=</td>
+    <td>16,89065516</td>
+  </tr>
+</table>
+<p>Są to dane w formacie deg.</p>
+<p>Teraz można użyć konwertera do przeliczenia współrzędnych:</p>
+<ol>
+  <li>W polu <i>Powiat</i> wybieramy <i>wielkopolskie Poznań</i>.</li>
+  <li>W polu <i>φ</i> wpisujemy <i>52,48649125</i> i naciskamy strzałkę w dół aby przejść do wpisania drugiej współrzędnej. Można też kliknąć myszką.</li>
+  <li>W polu <i>λ</i> wpisujemy <i>16,89065516</i> i naciskamy klawisz tab</li>
+  <li>W polu x y powinny pojawić się wyliczone współrzędne:
+    <table  class="it">
+      <tr>
+	<td>x</td>
+	<td>=</td>
+	<td>5817607,099</td>
+      </tr>
+      <tr>
+	<td>y</td>
+	<td>=</td>
+	<td>6424648,060</td>
+      </tr>
+  </table></li>
+  <li>Współrzędne x y powinny być zaznaczone tak że wystarczy naciśnąć Ctrl-c aby skopiwać je do schowka. Jeśli przez przypadek zdejmiemy zaznaczenie, to można nacisnąć Ctrl-a aby zaznaczyć obie współrzędne.
+</ol>
+<br>
+
+<h3>Przykład 2</h3>
+<p>Przed pomiarem sprawdzono, w której strefie układu PL-2000 znajduje się miejsce pomiaru. Można to zrobić w następujący sposób:</p>
+<ol>
+  <li>Wyświetlamy stronę <i>mapy.geoportal.gov.pl</i></li>
+  <li>Po prawej stronie w panelu <i>Zawartość mapy</i> w zakładce <i>Warstwy</i> należy rozwinąć folder <i>Specjalistyczne informacje geodezyjne</i> i zaznaczyć <i>Strefy układu 2000</i>.</li>
+  <li>Przez przybliżanie i oddalanie znajdujemy orientacyjne miejsce pomiaru i odczytujemy numer strefy. W tym przypadku jest to strefa nr 6.</li>
+</ol>  
+<p>W wyniku pomiaru uzyskano współrzędne punktu w układzie PL-ETRF2000:</p>
+<table  class="it">
+  <tr>
+    <td>szerokość</td>
+    <td>φ</td>
+    <td>=</td>
+    <td>52,48649125</td>
+  </tr>
+  <tr>
+    <td>długość</td>
+    <td>λ</td>
+    <td>=</td>
+    <td>16,89065516</td>
+  </tr>
+</table>
+<p>Przed przystąpieniem do obliczeń trzeba w zmienić wybór strefy układu PL-2000:</p>
+<ol>
+  <li>Klikamy zakładkę <i>Ustawienia</i>.</li>
+  <li>Zdejmujemy zaznaczenie w polu <i>Wybór strefy wg powiatu</i></li>
+  <li>Klikamy zakładkę <i>Konwerter</i> aby przejść do wprowadzania danych.</li>
+</ol>
+<p>Wprowadzanie danych i obliczenia:</p>
+<ol>
+  <li>Wybieramy strefę nr 6 w polu <i>Nr strefy PL-2000</i>
+  <li>Jeśli mamy wpisane dane w komputerze np. w postaci <i>52,48649125 16,89065516</i> czyli współrzędne rozdzielone spacją, to możemy w jednym zaznaczeniu skopiować do schowka. Następnie ustawić kursor w polu <i>φ λ</i> i wkleić.</li>
+  <li>Po naciśnieciu tab w polu x y powinny pojawić się wyliczone współrzędne:    <table  class="it">
+      <tr>
+	<td>x</td>
+	<td>=</td>
+	<td>5817607,099</td>
+	<td>m</td>
+      </tr>
+      <tr>
+	<td>y</td>
+	<td>=</td>
+	<td>6424648,060</td>
+	<td>m</td>
+      </tr>
+  </table></li>
+  <li>Poniżej pola x y wyświetla się informacja x±2mm y±1mm z jaką dokładnością zostały przeprowadzone obliczenia. To nie jest błąd pomiaru. Zależy ona tylko od ilości miejsc po przecinku wprowadzonych danych. W tym przykładzie dane PL-ETRF2000 mają 8 miejsc po przecinku.
+    <p>Uwaga: Jeśli w wyniku pomiaru uzyskano dane np. z 8 miejscami po przecinku to nie wolno dopisywać zer.</p></li>
+</ol>
+<br>
+<h3>Przykład 3</h3>
+<p>Mierzony punkt znajduje się na terenie powiatu Poznań.</p>
+<p>W wyniku pomiaru uzyskano współrzędne punktu w układzie PL-ETRF2000:</p>
+<table  class="it">
+  <tr>
+    <td>szerokość</td>
+    <td>φ</td>
+    <td>=</td>
+    <td>52°29′11,36850″</td>
+  </tr>
+  <tr>
+    <td>długość</td>
+    <td>λ</td>
+    <td>=</td>
+    <td>16°53′26,35858″</td>
+  </tr>
+</table>
+<p>Dane są w formacie dms.</p>
+<p>Wprowadzanie danych i przeliczenie(transformacja) współrzędnych:</p>
+<ol>
+  <li>W polu <i>Powiat</i> odnajdujemy <i>wielkopolskie Poznań</i></li>
+  <li>Kursor powinien znajdować się w polu <i>φ λ</i>. Naciskamy klawisz t aby przełączyć format wprowadzanych danych na dms.</li>
+  <li>Współrzędne <i>52°29′11,36850″ 16°53′26,35858″</i> wklejamy do pola <i>φ λ</i>.</li>
+   <li>Po naciśnieciu tab w polu x y powinny pojawić się wyliczone współrzędne:    <table  class="it">
+      <tr>
+	<td>x</td>
+	<td>=</td>
+	<td>5817607,0989</td>
+	<td>m</td>
+      </tr>
+      <tr>
+	<td>y</td>
+	<td>=</td>
+	<td>6424648,0597</td>
+	<td>m</td>
+      </tr>
+   </table></li>
+</ol>
+<br>
+<h3>Przykład 4</h3>
+<p>Przeprowadzono pomiary dla działki o identyfikatorze <i>022203_5.0032.133</i></p>
+<p>Najpierw należy sprawdzić w jakim powiecie znajduje się działka:</p>
+<ol>
+  <li>Wyświetlamy stronę <i>mapy.geoportal.gov.pl</i></li>
+  <li>W panelu <i>Wyszukiwania</i> znajdującym się w lewej górnej częsci portalu klikamy <i>WYSZUKIWANIA</i> a następnie <i>Wyszukiwanie działek</i>.</li>
+  <li>W okienku <i>Wyszukiwanie działek</i> wklejamy identyfikator <i>022203_5.0032.133</i> i klikamy <i>Szukaj</i>.</li>
+  <li>Na mapie zostanie zaznaczona wyszukiwana działka i wyświetli się informacja <i>WMS, Ewidencja gruntów i budynków 022203_5.0032.133</i>. Klikamy to.</li>
+  <li>Wyświetlone zostaną informacje o działce. Wśród nich jest, że działka znajduje się w województwie <i>dolnośląskim</i>, powiecie <i>wołowskim</i>.</li>
+</ol>
+<p>Uwaga: Przykładowa działka znajduje się przy granicy stref układu PL-2000. Przy wykonywaniu pomiarów możliwe jest, że przekroczymy granicę stref. Jednak przy wykonywaniu obliczeń podajemy, że działka znajduje się w województwie dolnośloskim, w powiecie wołowskim.</p>
+<p>W wyniku pomiaru uzyskano współrzędne punktu w układzie PL-ETRF2000:</p>
+<table  class="it">
+  <tr>
+    <td>szerokość</td>
+    <td>φ</td>
+    <td>=</td>
+    <td>51,39041092</td>
+  </tr>
+  <tr>
+    <td>długość</td>
+    <td>λ</td>
+    <td>=</td>
+    <td>16,46218019</td>
+  </tr>
+</table>
+<p>Przeliczenie współrzędnych:</p>
+<ol>
+  <li>W polu <i>Powiat</i> odnajdujemy <i>dolnośląskie wołowski</i></li>
+  <li>W polu <i>φ λ</i> wklejamy <i>51,39041092 16,46218019</i> i naciskamy klawisz tab</li>
+  <li>W polu x y powinny pojawić się wyliczone współrzędne:
+    <table  class="it">
+      <tr>
+	<td>x</td>
+	<td>=</td>
+	<td>5696203,689</td>
+      </tr>
+      <tr>
+	<td>y</td>
+	<td>=</td>
+	<td>6392968,160</td>
+      </tr>
+  </table></li>
+</ol>
+<br>
+<h3>Klawisze</h3>
+<table>
+  <tr>
+    <td><i>Tab albo Shift Tab</i></td>
+    <td>przejście pomiędzy polami. Jeśli wprowadzono dane i przejście do pola x y to zostaną wykonane obliczenia.</td>
+  </tr>
+  <tr>
+    <td><i>t</i></td>
+    <td>przełączenie między formatami współrzędnych PL-ETRF2000 jeśli kursor jest w linii φ albo λ</td>
+  </tr>
+  <tr>
+    <td><i>Ctrl a</i></td>
+    <td>zaznaczenie całego tekstu w polu</td>
+  </tr>
+  <tr>
+    <td><i>strzałka góra albo strzałka dół</i></td>
+    <td>przejście pomiędzy liniami φ i λ albo liniami x y</td>
+  </tr>
+  <tr>
+    <td><i>Enter</i></td>
+    <td>jeśli wprowadzono dane i kursor jest w polu φ λ, to wyliczenie współrzędnych x y bez przechodzenia do następnego pola</td>
+  </tr>
+</table>
+<br>
+<h3>Dodatkowe informacje</h3>
+<p>Uwaga: W funkcjach QGIS kolejność współrzędnych jest odwrotna niż w układzie PL-2000.</p>
+
+
+
