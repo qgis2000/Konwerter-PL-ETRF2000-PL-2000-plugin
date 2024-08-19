@@ -2,6 +2,6 @@ Konwerter współrzędnych punktu układu PL-ETRF2000 do współrzędnych w ukł
 
 Instaluje się jako panel dostępny w menu Widok, Panele albo po kliknięciu prawym przyciskiem na dowolnym pasku narzędzi głównego okna.
 
-Wersja 1.1.4
+Wersja 1.1.5
 
 ![First look](FirstLook.png)
