@@ -4,4 +4,4 @@ Instaluje się jako panel dostępny w menu Widok, Panele albo po kliknięciu pra
 
 Wersja 1.1.5
 
-![First look](FirstLook.png)
+![dd coordinates](FirstLook1.png) ![dms coordinates](FirstLook2.png)
