@@ -15,7 +15,7 @@ tracker=https://github.com/qgis2000/Konwerter-PL-ETRF2000-PL-2000-plugin/issues
 repository=https://github.com/qgis2000/Konwerter-PL-ETRF2000-PL-2000-plugin
 qgisMinimumVersion=3.28
 author=Szymon Kędziora
-email=szymon.kedziora@onet.pl
+email=s9281723@gmail.com
 icon=thumbnail.png
 
 tags=converter
