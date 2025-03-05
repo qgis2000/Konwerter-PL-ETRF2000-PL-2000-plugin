@@ -1,4 +1,4 @@
-Konwerter współrzędnych punktu układu PL-ETRF2000 do współrzędnych w układzie PL-2000, w którym na mapie podawane są współrzędne działek i budynków. Wtyczka została utworzona w QGIS 3.34.
+Konwerter współrzędnych punktu układu PL-ETRF2000 do współrzędnych w układzie PL-2000, w którym podawane są współrzędne działek i budynków. Wtyczka została utworzona w QGIS 3.34.
 
 Instaluje się jako panel dostępny w menu Widok, Panele albo po kliknięciu prawym przyciskiem na dowolnym pasku narzędzi głównego okna.
 
